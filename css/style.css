@@ -1,0 +1,292 @@
+/* Configurações gerais */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #4CAF50, #2E8B57);
+    
+}
+header{
+   
+    z-index: 5;
+    position: relative;
+}
+
+
+main{
+    z-index: 5;
+    position: relative;
+}
+
+p{
+    z-index: 5;
+    position: relative;
+   
+}
+h1{
+    z-index: 5;
+    position: relative;
+} 
+
+/*logo*/
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.logo-img {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    filter: drop-shadow(2px 2px 6px rgba(0,0,0,0.5));
+}
+
+.forest {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -2;
+}
+
+/* Céu e Sol */
+.sky {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 50%;
+    background: linear-gradient(to bottom, #87CEEB, #4CAF50);
+}
+
+.sun {
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    width: 150px;
+    height: 150px;
+    background: radial-gradient(circle, #FFD700, #FFA500);
+    border-radius: 50%;
+    box-shadow: 0 0 50px rgba(255, 215, 0, 0.8);
+}
+
+/* Árvores */
+.tree {
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 300px;
+    background: #8B4513;
+    z-index: 1;
+}
+
+.tree::before {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: -50px;
+    width: 160px;
+    height: 120px;
+    background: #228B22;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tree::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: -70px;
+    width: 200px;
+    height: 150px;
+    background: #32CD32;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.tree.large {
+    width: 80px;
+    height: 400px;
+}
+
+.tree.large::before {
+    width: 200px;
+    height: 150px;
+    left: -70px;
+}
+
+.tree.large::after {
+    width: 250px;
+    height: 200px;
+    left: -90px;
+}
+
+.tree.small {
+    width: 40px;
+    height: 200px;
+}
+
+.tree.small::before {
+    width: 100px;
+    height: 80px;
+    left: -30px;
+}
+
+.tree.small::after {
+    width: 120px;
+    height: 100px;
+    left: -40px;
+}
+
+/* Grama */
+.grass {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 20%;
+    background: linear-gradient(to top, #006400, #228B22);
+}
+
+/* Posicionamento das árvores */
+.tree1 {
+    left: 5%;
+}
+
+.tree2 {
+    left: 20%;
+}
+
+.tree3 {
+    left: 35%;
+}
+
+.tree4 {
+    left: 50%;
+}
+
+.tree5 {
+    left: 65%;
+}
+
+.tree6 {
+    left: 80%;
+}
+
+.tree7 {
+    left: 15%;
+    height: 350px;
+}
+
+.tree8 {
+    left: 30%;
+    height: 250px;
+}
+
+.tree9 {
+    left: 45%;
+    height: 400px;
+}
+
+.tree10 {
+    left: 60%;
+    height: 300px;
+}
+
+.tree11 {
+    left: 75%;
+    height: 200px;
+}
+
+.tree12 {
+    left: 90%;
+    height: 350px;
+}
+
+
+
+/* Contêiner para os cards */
+.card-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    z-index: 5;
+    
+}
+
+/* Estilo dos cards */
+.card {
+    background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #2E8B57;
+}
+
+.card p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+}
+
+.card ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.card ul li {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 10;
+}
+
+footer .social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+footer .contact p {
+    margin: 5px 0;
+}
+
+footer .copyright p {
+    margin: 5px 0;
+    font-size: 14px;
+}
