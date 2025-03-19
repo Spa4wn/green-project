@@ -291,3 +291,65 @@ footer .copyright p {
     margin: 5px 0;
     font-size: 14px;
 }
+
+/* Estilos específicos para celulares */
+@media only screen and (max-width: 767px) {
+    body {
+        overflow: auto; /* Permite rolagem em dispositivos móveis */
+    }
+
+    .card-container {
+        grid-template-columns: 1fr; /* Uma coluna para dispositivos móveis */
+        gap: 10px; /* Reduz o espaçamento entre os cards */
+        padding: 10px; /* Reduz o padding */
+    }
+
+    .card {
+        padding: 15px; /* Reduz o padding dos cards */
+    }
+
+    .card h1 {
+        font-size: 20px; /* Reduz o tamanho da fonte do título */
+    }
+
+    .card p {
+        font-size: 14px; /* Reduz o tamanho da fonte do parágrafo */
+    }
+
+    .logo {
+        font-size: 24px; /* Reduz o tamanho da fonte do logo */
+    }
+
+    .logo-img {
+        width: 40px; /* Reduz o tamanho da imagem do logo */
+        height: 40px;
+    }
+
+    .sun {
+        width: 100px; /* Reduz o tamanho do sol */
+        height: 100px;
+    }
+
+    .tree {
+        width: 40px; /* Reduz o tamanho das árvores */
+        height: 200px;
+    }
+
+    .tree.large {
+        width: 60px; /* Reduz o tamanho das árvores grandes */
+        height: 300px;
+    }
+
+    .tree.small {
+        width: 30px; /* Reduz o tamanho das árvores pequenas */
+        height: 150px;
+    }
+
+    footer {
+        padding: 5px 0; /* Reduz o padding do footer */
+    }
+
+    footer .copyright p {
+        font-size: 12px; /* Reduz o tamanho da fonte do copyright */
+    }
+}
